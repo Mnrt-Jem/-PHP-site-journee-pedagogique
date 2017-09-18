@@ -27,13 +27,13 @@
     <!-- Page Header -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-9" style="height: 100px;">
         <br>
           <h1>Créer, Partager, Construire Ensemble !</h1>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3" style="text-align: right; height: 100px;">
         <br>
-          <a href="www.youtube.com"><i class="fa fa-play fa-2x" aria-hidden="true"></i></a>
+          <a href="www.youtube.com" id="fonts_dmonfion"><i class="fa fa-play fa-2x" aria-hidden="true" ></i></a>
           <a href="www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
           <a href="contact.php"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
         </div>
@@ -42,57 +42,80 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 100px;">
+          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 200px;">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee2.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee2.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee3.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee3.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee4.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee4.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 100px;">
+          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 200px;">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee2.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee2.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee3.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee3.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee4.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee4.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 100px;">
+          <img class="img-responsive" src="img/lycee1.jpeg" style="height: 200px;">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee2.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee2.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee3.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee3.jpg" style="height: 200px;"">
         </div>
         <div class="col-lg-1">
-          <img class="img-responsive" src="img/lycee4.jpg" style="height: 100px;"">
+          <img class="img-responsive" src="img/lycee4.jpg" style="height: 200px;"">
         </div>
       </div>
     </div>
     <br>
-    <div class="container">
+    <div class="container" style="background-color: #19253D;">
       <div class="row">
-        <div class="col-lg-3"> 
-        <a class="btn btn-secondary float-right" href="#">Accueil</a>
+        <br>
+        <br>
+        <div class="col-lg-3" id="header_menu"> 
+        <a class="" href="#"><h3>Accueil</h3></a>
         </div>
-        <div class="col-lg-3"> 
-        <a class="btn btn-secondary float-right" href="#">Programme</a>
+        <div class="col-lg-3" id="header_menu"> 
+        <a class="" href="#"><h3>Programme</h3></a>
         </div>
-        <div class="col-lg-3"> 
-        <a class="btn btn-secondary float-right" href="#">Live</a>
+        <div class="col-lg-3" id="header_menu"> 
+        <a class="" href="#"><h3>Live</h3></a>
         </div>
-        <div class="col-lg-3"> 
-        <a class="btn btn-secondary float-right" href="#">Retour</a>
+        <div class="col-lg-3" id="header_menu"> 
+        <a class="" href="#"><h3>Retour</h3></a>
         </div>
       </div>
     </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <hr>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
