@@ -317,17 +317,6 @@ header.masthead .post-heading .meta a
 	}
 }
 
-#header_menu
-{
-	text-align: center;
-	padding-top: 15px;
-}
-
-#header_menu>a:hover,a:focus
-{
-	color: #ffffff;
-}
-
 .post-preview>a
 {
 	color:#7a7a7a
@@ -449,7 +438,8 @@ form .form-group:first-child .floating-label-form-group
 
 footer
 {
-	padding:50px 0 65px
+	padding:50px 0 65px;
+	background-color:#19253D;
 }
 
 footer .list-inline
