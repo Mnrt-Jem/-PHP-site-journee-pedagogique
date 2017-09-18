@@ -36,7 +36,7 @@
 
 a:focus,a:hover
 {
-	color:#ffffff
+	color:#19253D;
 }
 
 a img:focus,a img:hover
@@ -315,6 +315,17 @@ header.masthead .post-heading .meta a
 	{
 		font-size:30px
 	}
+}
+
+#header_menu
+{
+	text-align: center;
+	padding-top: 15px;
+}
+
+#header_menu>a:hover,a:focus
+{
+	color: #ffffff;
 }
 
 .post-preview>a
