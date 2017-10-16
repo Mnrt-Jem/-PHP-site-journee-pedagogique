@@ -10,7 +10,7 @@
     {
         $id = checkInput($_GET['id']);
     }
-    var_dump($id);
+    
 
  
     $nomError = $prenomError ="";
@@ -63,7 +63,7 @@
       $data = htmlspecialchars($data);
       return $data;
     }
-     var_dump($lienYoutube, $nomLy);
+     
 ?>
 <!DOCTYPE html>
 <html>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 16 oct. 2017 à 12:01
+-- Généré le :  lun. 16 oct. 2017 à 12:55
 -- Version du serveur :  5.7.19
--- Version de PHP :  5.6.31
+-- Version de PHP :  7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -53,15 +53,23 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `live`
+-- Structure de la table `lien_youtube`
 --
 
-DROP TABLE IF EXISTS `live`;
-CREATE TABLE IF NOT EXISTS `live` (
-  `id_vid` int(11) NOT NULL AUTO_INCREMENT,
-  `lien_vid` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id_vid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `lien_youtube`;
+CREATE TABLE IF NOT EXISTS `lien_youtube` (
+  `id_ly` int(11) NOT NULL AUTO_INCREMENT,
+  `lien` varchar(255) COLLATE utf8_bin NOT NULL,
+  `nom_lien` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id_ly`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `lien_youtube`
+--
+
+INSERT INTO `lien_youtube` (`id_ly`, `lien`, `nom_lien`) VALUES
+(3, 'fdp', 'bte');
 
 -- --------------------------------------------------------
 
@@ -106,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `programme` (
 --
 
 INSERT INTO `programme` (`id_prog`, `nom_prog`, `img_prog`, `text_prog`) VALUES
-(1, 'pilo', NULL, 'pilo2										bite'),
+(1, 'pilo', NULL, 'pilo2                    bite'),
 (4, 'Jm le plus beau', NULL, 'jm est beau');
 
 -- --------------------------------------------------------

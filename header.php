@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Lycée Saint-Vincent | Journée Pédagogique</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -68,17 +68,16 @@
             </a>
         </div>
         <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="#"><h3>Accueil</h3></a>
+        <a class="" href="index.php"><h3>Accueil</h3></a>
         </div>
         <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="#"><h3>Programme</h3></a>
+        <a class="" href="programme.php"><h3>Programme</h3></a>
         </div>
         <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="#"><h3>Live</h3></a>
+        <a class="" href="live.php"><h3>Live</h3></a>
         </div>
         <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="#"><h3>Retour</h3></a>
+        <a class="" href="retour.php"><h3>Retour</h3></a>
         </div>
       </div>
     </div>
-    

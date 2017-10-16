@@ -1,10 +1,7 @@
 <?php include 'header.php'; ?>
 <?php include 'db.php'; 
-
 $requeteProg = $con->prepare('SELECT id_prog,nom_prog,img_prog,text_prog from programme');
 $requeteProg->execute();
-
-
 ?>
 <!-- Main Content -->
 <div class="container">

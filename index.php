@@ -1,11 +1,9 @@
 <?php
 include 'header.php';
 ?>
-
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-10 mx-auto">
-          <hr>
           <h2> Construire notre projet d'établissement : comment fait-on réussir nos élèves ? L'esprit Saint-Vincent aujourd'hui , c'est ... ?</h2>
           <hr>
           <P>

@@ -1,6 +1,5 @@
 <?php  
 	include'database.php';
-	include'../header.php';
     session_start();
 	if (!isset($_SESSION['login'])) 
 	{
@@ -78,9 +77,12 @@
 					<div class="administration-trombi">
 						<div class="row">
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
-							<form role="form" class="form-vertcial col-md-9 col-sm-8 col-xs-8" method="post" action="admin/index.php">
-								<fieldset>
-									<legend><span style="color: #6DA542;"> <em>Administration</em></span><a href="admin/index.php" class="btn" style="margin-left: 80px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+								<form role="form" class="form-vertcial col-md-9 col-sm-8 col-xs-8" method="post" action="admin/index.php">
+									<fieldset>
+										<legend><span style="color: #6DA542;"> <em>Administration</em></span><a href="admin/index.php" class="btn" style="margin-left: 80px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									</fieldset>
+								</form>
+							</div>
 
 					</div>
 				</div>
@@ -91,6 +93,7 @@
 					<div class="administration-trombi">
 						<div class="row">
 						<a href="insert.php" class="btn" style="margin-left: 25px;"><span class="glyphicon glyphicon-plus"></span> Ajouter un utilisateur</a><a href="admin_agence.php" class="btn" style="margin-left: 25px;"> Liste des programmes</a><a href="admin_service.php" class="btn" style="margin-left: 25px;"></span> Liste des liens YT</a><a href="admin/index.php" class="btn" style="margin-left: 25px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
+					</div>
 
 		<footer>
 			<div class="container">
