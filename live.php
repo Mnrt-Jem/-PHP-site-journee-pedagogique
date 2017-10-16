@@ -5,7 +5,7 @@
 
     <!-- Main Content -->
     <?php 
-      $live=$con->prepare('SELECT * from live');
+      $live=$con->prepare('SELECT * from lien_youtube');
       $live->execute();
     ?>
     <div class="container">
@@ -17,7 +17,7 @@
         <div class="col-lg-9">
           <?php while ($donnees=$live->fetch()) { ?>
             <div class="col-lg-3 col-lg-offset-1" style="display: inline-block;">
-            <iframe width="175" height="150" src="<?= $donnees['lien_vid']; ?>" frameborder="0" allowfullscreen></iframe>
+            <iframe width="175" height="150" src="<?= $donnees['lien']; ?>" frameborder="0" allowfullscreen></iframe>
             </div>
           <?php } ?>
         </div>
