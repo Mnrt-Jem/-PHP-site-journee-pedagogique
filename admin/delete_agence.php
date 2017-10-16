@@ -13,7 +13,7 @@
     if(!empty($_POST)) 
     {
         $idAgence = checkInput($_POST['id_agence']);
-        $statement = $db->prepare("DELETE FROM agence WHERE id_agence = ?");
+        $statement = $db->prepare("DELETE FROM programme WHERE id_prog = ?");
         $statement->execute(array($idAgence));
         header("Location: admin_agence.php"); 
     }

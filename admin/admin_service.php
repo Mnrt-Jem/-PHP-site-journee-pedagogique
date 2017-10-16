@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Administration - Trombinoscope</title>
+		<title>Administration - Liens</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=7">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -53,7 +53,7 @@
 				<div class="red-bar">
 					<div class="administration-trombi">
 						<div class="row">
-							<h1><strong>Liste des services  </strong><a href="insert_service.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-plus"></span> Ajouter</a><a href="index.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
+							<h1><strong>Liste des liens  </strong><a href="insert_service.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-plus"></span> Ajouter</a><a href="index.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
 			                <table class="table table-striped table-bordered table-hover">
 			                  <thead>
 			                    <tr>
@@ -64,13 +64,13 @@
 			                  <tbody>			                  
 							    <?php
 							    	
-									$service = 'SELECT * FROM service ORDER BY nom_service ASC';
-									$req = $db->query($service);
+									$lienYoutube = 'SELECT * FROM lien_youtube ORDER BY nom_lien ASC';
+									$req = $db->query($lienYoutube);
 
 									while ($row = $req->fetch()) 
 									{
 										echo "<tr>";
-										echo "<td>".$row['nom_service']."</td><td><a href='delete_service.php?id=".$row['id_service']."'>Supprimer</a></td>";
+										echo "<td>".$row['nom_lien']."</td><td><a href='delete_service.php?id=".$row['id_ly']."'>Supprimer</a><a href='modif_lien_youtube.php?id=".$row['id_ly']."'>  Modifier</a>";
 										echo "</tr>";
 									}
 									

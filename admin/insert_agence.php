@@ -11,11 +11,11 @@
     if(!empty($_POST)) 
     {
 
-        $nomAgence        = checkInput($_POST['nom_agence']);
+        $nomProgramme        = checkInput($_POST['nom_prog']);
         $isSuccess          = true;
 
         
-        if(empty($nomAgence)) 
+        if(empty($nomProgramme)) 
         {
             $nomError = 'Ce champ ne peut pas être vide';
             $isSuccess = false;
@@ -23,8 +23,8 @@
         
         if($isSuccess) 
         {
-            $statement = $db->prepare("INSERT INTO agence(nom_agence) values(?)");
-            $statement->execute(array($nomAgence));
+            $statement = $db->prepare("INSERT INTO programme(id_prog,nom_prog,img_prog,text_prog) values(?, ?, ?, ?)");
+            $statement->execute(array(null,$nomProgramme,null,null));
             header("Location: admin_agence.php");
         }
     }
@@ -85,14 +85,14 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="insert_agence.php" role="form" class="form-vertcial col-md-9 col-sm-9 col-xs-9" method="post">
 								<fieldset>
-									<legend><span style="color: #6DA542; font-style: normal;"><em>Administration - Ajout d'une agence</em></span><a href="admin_agence.php" class="btn" style="margin-left: 5px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend><span style="color: #6DA542; font-style: normal;"><em>Administration - Ajout d'un programme</em></span><a href="admin_agence.php" class="btn" style="margin-left: 5px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
 									<div class="form-group" for="nom">
-										<label id="nom">Nom de l'agence :</label>	
-										<input class="form-nom" type="text" name="nom_agence" placeholder="nom de l'agence" style="margin-left: 20px;" required="">
+										<label id="nom">Nom du programme :</label>	
+										<input class="form-nom" type="text" name="nom_prog" placeholder="nom de l'agence" style="margin-left: 20px;" required="">
 										<br>
 										<span class="help-inline" style="color: red"><?php echo $nomError;?></span>
 									</div>
-									<button type="submit" class="btn" style="margin-left: 143px;" name="validation">Ajouter l'agence</button>
+									<button type="submit" class="btn" style="margin-left: 143px;" name="validation">Ajouter le programme</button>
 								</fieldset>
 							</form>						
 						</div>

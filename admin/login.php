@@ -3,7 +3,7 @@
 	session_start();
 	if (isset($_SESSION['login'])) 
 	{
-	  	header("location: index.php");
+	  	header("location: header.php");
 	 }
 
 	$login = $password = $error ="";
@@ -13,7 +13,7 @@
 		$login		=checkInput($_POST['login']);
 		$password	=checkInput($_POST['password']);
 		
-		$statement = $db -> prepare("SELECT * FROM utilisateur WHERE login = ? and password = ?");
+		$statement = $db -> prepare("SELECT * FROM login WHERE nom_log = ? and mdp_log = ?");
 		$statement->execute(array($login,$password));
 
 		if ($statement ->fetch())
@@ -39,7 +39,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Connexion - Trombinoscope</title>
+		<title>Connexion - Espace administrateur</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=7">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -60,7 +60,7 @@
 				<div class="col-md-6">
 				<div class="header-trombi">
 						<div class="main-menu">
-							<a href="../index.php"><img src="../images/logo_accueil.png" style="margin-bottom: 10px"></a>
+							<a href="../index.html"><img src="../images/logo_accueil.png" style="margin-bottom: 10px"></a>
 						</div>
 					</div>						
 				</div>
@@ -81,7 +81,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="login.php" role="form" class="form-vertical col-md-9 col-sm-8 col-xs-8" method="POST">
 								<fieldset>
-									<legend style="width: 500px;"><span style="color: #6DA542;"><em>Trombinoscope - Connexion Administrateur</em></span><a href="../index.php" class="btn" ><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend style="width: 500px;"><span style="color: #6DA542;"><em>journée pedagogique - Connexion Administrateur</em></span><a href="admin/index.php" class="btn" ><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
 									<div class="form-group">
 										<label for="identifiant">Identifiant :</label>	
 										<input class="form-nom" type="text" id="login"  placeholder="nom d'utilisateur" style="margin-left: 20px;" name="login" required="">
@@ -101,6 +101,7 @@
 			</div>
 		</section>
 		<footer>
+			<?php include '../footer.php';?>
 			<div class="container">
 				<div class="red-bar">
 					<div class="row">
@@ -108,10 +109,6 @@
 							<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
 								<br />
 								<br />
-								<ul>
-									<li class="end">EGETRA SA &copy;2009 - Tous droits réservés</li> 
-									<li class="sign">Powered by Debian GNU / Linux<a href="http://wiki.resgestrans.int"><img src="../images/tuxlogo.png" style="vertical-align:middle" alt="Debian" /></a> - Apache<img src="../images/apachelogo.png" style="vertical-align:middle" alt="LE serveur Web !" /></a> - Designed By Seb2A</li>
-								</ul>
 							</div>			
 						</div>					
 					</div>

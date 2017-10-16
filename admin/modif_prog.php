@@ -4,47 +4,39 @@
 	{
 	  	header("location: login.php");
 	}
-	if(!empty($_GET['id'])) 
-    {
-        $id = checkInput($_GET['id']);
-    }     
+
     include 'database.php';
+    if(!empty($_GET['id'])) 
+    {
+        $idProg = checkInput($_GET['id']);
+    }
+    var_dump($idProg);
+
  
-    $imageError = $nomError = $prenomError = $posteError = $agenceError = "";
+    $imageError = $nomError = $prenomError = $posteError = $agenceError ="";
 
     if(!empty($_POST)) 
     {
 
-        $nomEmploye         = checkInput($_POST['nom_employe']);
-        $prenomEmploye      = checkInput($_POST['prenom_employe']);
-        $agenceEmploye      = checkInput($_POST['agence_employe']);
-        $serviceEmploye     = checkInput($_POST['service_employe']); 
-        $image              = checkInput($_FILES["image"]["name"]);
-        $imagePath          = '../images/'. basename($image);
+        $nomProg         = checkInput($_POST['nom_prog']);
+        $textProg     = checkInput($_POST['text_prog']);
+        $imageProg              = checkInput($_FILES["image"]["name"]);
+        $imagePath          = '../img/'. basename($imageProg);
         $imageExtension     = pathinfo($imagePath,PATHINFO_EXTENSION);
         $isSuccess          = true;
+
         
-        if(empty($nomEmploye)) 
+        if(empty($nomProg)) 
         {
             $nomError = 'Ce champ ne peut pas être vide';
             $isSuccess = false;
         }
-        if(empty($prenomEmploye)) 
+        if(empty($textProg)) 
         {
             $prenomError = 'Ce champ ne peut pas être vide';
             $isSuccess = false;
         } 
-        if(empty($agenceEmploye)) 
-        {
-            $agenceError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        } 
-        if(empty($serviceEmploye)) 
-        {
-            $posteError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        }
-        if(empty($image)) 
+        if(empty($imageProg)) 
         {
             $isImageUpdated = false;
         }
@@ -62,7 +54,7 @@
                 $imageError = "Le fichier existe deja";
                 $isUploadSuccess = false;
             }
-            if($_FILES["image"]["size"] > 1000000) 
+            if($_FILES["image"]["size"] > 10000000) 
             {
                 $imageError = "Le fichier ne doit pas depasser 1Mo";
                 $isUploadSuccess = false;
@@ -83,26 +75,26 @@
         	
         	if ($isImageUpdated) 
         	{
-        		$statement = $db->prepare("UPDATE employe SET nom_employe=?,prenom_employe=?,agence_employe=?,service_employe=?,image_employe=? WHERE id_employe=?");
-            	$statement->execute(array($nomEmploye,$prenomEmploye,$agenceEmploye,$serviceEmploye,$image,$id));
+        		$statement = $db->prepare("UPDATE programme SET nom_prog=?,text_prog=?,img_prog=? WHERE id_prog=?");
+            	$statement->execute(array($nomProg,$textProg,$imageProg,$idProg));
         	}
         	else
         	{
-        		$statement = $db->prepare("UPDATE employe SET nom_employe=?,prenom_employe=?,agence_employe=?,service_employe=? WHERE id_employe=?");
-            	$statement->execute(array($nomEmploye,$prenomEmploye,$agenceEmploye,$serviceEmploye,$id));
+        		$statement = $db->prepare("UPDATE programme SET nom_prog=?,text_prog=? WHERE id_prog=?");
+            	$statement->execute(array($nomProg,$textProg,$idProg));
         	}
 
             
-            header("Location: index.php");
+            header("Location: admin_agence.php");
 
         }
         else if($isImageUpdated && !$isUploadSuccess)
         {
         	
-            $statement = $db->prepare("SELECT * FROM employe where id = ?");
-            $statement->execute(array($id));
-            $employe = $statement->fetch();
-            $imageProg = $programme['img_prog'];
+            $statement = $db->prepare("SELECT * FROM programme where id_prog = ?");
+            $statement->execute(array($idProg));
+            $programme = $statement->fetch();
+            $image = $programme['img_prog'];
             
         }
 
@@ -110,14 +102,12 @@
 
     else
     {
-    	$statement = $db ->prepare("SELECT * FROM employe WHERE id_employe=?");
-    	$statement->execute(array($id));
-    	$employe = $statement->fetch();
-    	$nomEmploye         = $employe['nom_employe'];
-        $prenomEmploye      = $employe['prenom_employe'];
-        $agenceEmploye      = $employe['agence_employe'];
-        $serviceEmploye     = $employe['service_employe']; 
-        $image              = $employe['image_employe'];
+    	$statement = $db ->prepare("SELECT * FROM programme WHERE id_prog = ?");
+    	$statement->execute(array($idProg));
+    	$programme = $statement->fetch();
+    	$nomProg         = $programme['nom_prog'];
+        $textProg      = $programme['text_prog']; 
+        $imageProg              = $programme['img_prog'];
     }
     function checkInput($data) 
     {
@@ -126,6 +116,7 @@
       $data = htmlspecialchars($data);
       return $data;
     }
+     var_dump($nomProg, $textProg, $imageProg);
 ?>
 <!DOCTYPE html>
 <html>
@@ -173,61 +164,29 @@
 					<div class="administration-trombi ">
 						<div class="row">
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
-							<form action="<?php echo 'update.php?id=' .$id; ?>" role="form" class="form-vertcial col-md-8 col-sm-7 col-xs-7" method="post" enctype="multipart/form-data">
+							<form action="<?php echo 'modif_prog.php?id=' .$idProg; ?>" role="form" class="form-vertcial col-md-8 col-sm-7 col-xs-7" method="post" enctype="multipart/form-data">
 								<fieldset>
-									<legend style="width: 468px;"><span style="color: #6DA542;"><em>Administration - Modifier les informations</em></span><a href="index.php" class="btn""><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend style="width: 468px;"><span style="color: #6DA542;"><em>Administration - Modifier les informations</em></span><a href="admin_agence.php" class="btn""><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
 									<div class="form-group" for="photo">
 										<label for="photo_employe" id="photo">Sélectionner une nouvelle image (max. 1 Mo):</label>
-										<p><?php echo $image;?></p>
-										<input type="file" id="photo_employe" name="image" placeholder="photo de l'employé">
+										<p><?php echo $imageProg;?></p>
+										<input type="file" id="photo_employe" name="image_prog" placeholder="photo de l'employé">
 										<br>
 										<span class="help-inline" style="color: red"><?php echo $imageError;?></span>
 									</div>
-									<div class="form-group" for="nom">
+									<div class="form-group" for="nom programme">
 										<label id="nom">Nom :</label>	
-										<input class="form-nom" type="text" name="nom_employe" placeholder="nom de l'employé" style="margin-left: 27px;" value="<?php echo $nomEmploye;?>" required="">
+										<input class="form-nom" type="text" name="nom_prog" placeholder="nom du programme" style="margin-left: 27px;" value="<?php echo $nomProg;?>" required="">
 										<br>
 										<span class="help-inline" style="color: red"><?php echo $nomError;?></span>
 									</div>
-									<div class="form-group" for="prenom">
-										<label id="prenom">Prenom :</label>	
-										<input class="form-nom" type="text" name="prenom_employe" placeholder="prenom de l'employé" value="<?php echo $prenomEmploye;?>" required="" style="margin-left: 7px;">
+									<div class="form-group" for="text programme">
+										<label id="prenom">text programme :</label>	
+										<textarea  name="text_prog" rows=20 >
+											<?php echo $textProg;?>
+										</textarea>
 										<br>
 										<span class="help-inline" style="color: red"><?php echo $prenomError;?></span>
-									</div>
-									<div class="form-group" for="agence">
-										<label id="agence">Agence :</label>	
-										<select class="selector" style="margin-left: 9px;" name="agence_employe">
-											<?php
-												
-					                           	foreach ($db->query('SELECT * FROM agence ORDER BY nom_agence ASC') as $row) 
-					                           	{
-					                           		if($row['nom_agence'] == $agenceEmploye)
-				                                        echo '<option selected="selected" value="'. $row['nom_agence'] .'">'. $row['nom_agence'] . '</option>';
-				                                    else
-				                                       echo '<option value="'. $row['nom_agence'] .'">'. $row['nom_agence'] . '</option>';
-					                           	}
-					                           												
-											?>
-										</select>
-										<span class="help-inline" style="color: red"><?php echo $agenceError;?></span>
-									</div>
-									<div class="form-group" for="service">
-										<label id="service">Service :</label>	
-										<select class="selector" style="margin-left: 4px;" name="service_employe">
-											<?php
-												
-					                           	foreach ($db->query('SELECT * FROM service ORDER BY nom_service ASC') as $row) 
-					                           	{
-					                           		if($row['nom_service'] == $serviceEmploye)
-				                                        echo '<option selected="selected" value="'. $row['nom_service'] .'">'. $row['nom_service'] . '</option>';
-				                                    else
-					                                echo '<option value="'. $row['nom_service'] .'">'. $row['nom_service'] . '</option>';;
-					                           	}
-					                           													
-											?>
-										</select>
-										<span class="help-inline" style="color: red"><?php echo $posteError;?></span>
 									</div>
 									<button type="submit" class="btn" style="margin-left: 120px;" name="validation">Modifier</button>
 								</fieldset>

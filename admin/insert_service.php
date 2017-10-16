@@ -11,11 +11,17 @@
     if(!empty($_POST)) 
     {
 
-        $nomService        = checkInput($_POST['nom_service']);
+        $lien       = checkInput($_POST['lien']);
         $isSuccess          = true;
-
+        $nom_lien  = checkInput($_POST['nom_lien']);
         
-        if(empty($nomService)) 
+        if(empty($lien)) 
+        {
+            $nomError = 'Ce champ ne peut pas être vide';
+            $isSuccess = false;
+        }
+
+        if(empty($nom_lien)) 
         {
             $nomError = 'Ce champ ne peut pas être vide';
             $isSuccess = false;
@@ -25,8 +31,8 @@
         {
 
 
-            $statement = $db->prepare("INSERT INTO service(nom_service) values(?)");
-            $statement->execute(array($nomService));
+            $statement = $db->prepare("INSERT INTO lien_youtube(lien,nom_lien) values(?,?)");
+            $statement->execute(array($lien,$nom_lien));
             header("Location: admin_service.php");
 
         }
@@ -88,10 +94,16 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="insert_service.php" role="form" class="form-vertcial col-md-9 col-sm-9 col-xs-9" method="post">
 								<fieldset>
-									<legend><span style="color: #6DA542;"> <em>Administration - Ajout d'un service</em></span><a href="admin_service.php" class="btn" style="margin-left: 19px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend><span style="color: #6DA542;"> <em>Administration - Ajout d'un lien youtube</em></span><a href="admin_service.php" class="btn" style="margin-left: 19px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
 									<div class="form-group" for="nom">
-										<label id="nom">Nom du service :</label>	
-										<input class="form-nom" type="text" name="nom_service" placeholder="nom du service" style="margin-left: 20px;" required="">
+										<label id="nom">lien :</label>	
+										<input class="form-nom" type="text" name="lien" placeholder="nom du service" style="margin-left: 20px;" required="">
+										<br>
+										<span class="help-inline" style="color: red"><?php echo $nomError;?></span>
+									</div>
+									<div class="form-group" for="nom">
+										<label id="nom">Nom du lien :</label>	
+										<input class="form-nom" type="text" name="nom_lien" placeholder="nom du lien" style="margin-left: 20px;" required="">
 										<br>
 										<span class="help-inline" style="color: red"><?php echo $nomError;?></span>
 									</div>

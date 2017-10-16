@@ -2,7 +2,7 @@
 
     try//Début connexion
     {
-    $db = new PDO("mysql:host=localhost;dbname=test", "root", "");
+    $db = new PDO("mysql:host=localhost;dbname=projet_peda", "root", "");
     }
     catch(Exception $e)
     {

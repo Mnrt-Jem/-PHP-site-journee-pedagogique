@@ -53,24 +53,24 @@
 					<div class="red-bar">
 						<div class="administration-trombi">
 							<div class="row">
-								<h1><strong>Liste des agences  </strong><a href="insert_agence.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-plus"></span> Ajouter</a><a href="index.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
+								<h1><strong>Liste des programmes  </strong><a href="insert_agence.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-plus"></span> Ajouter</a><a href="index.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
 				                <table class="table table-striped table-bordered table-hover">
 				                  <thead>
 				                    <tr>
-				                      <th>Agence</th>
-				                      <th>Action</th>
+				                      <th>programme</th>
+				                      <th>action</th>
 				                    </tr>
 				                  </thead>
 				                  <tbody>			                  
 								    <?php
 								    	
-										$agence = 'SELECT * FROM agence ORDER BY nom_agence ASC';
-										$req = $db->query($agence);
+										$programme = 'SELECT * FROM programme ORDER BY nom_prog ASC';
+										$req = $db->query($programme);
 
-										while ($row = $req->fetch()) 
+										while ($programme = $req->fetch()) 
 										{
 											echo "<tr>";
-											echo "<td>".$row['nom_agence']."</td><td><a href='delete_agence.php?id=".$row['id_agence']."'>Supprimer</a></td>";
+											echo "<td>".$programme['nom_prog']."</td><td><a href='delete_agence.php?id=".$programme['id_prog']."'>Supprimer</a><a href='modif_prog.php?id=".$programme['id_prog']."'>  Modifier</a>";
 											echo "</tr>";
 										}
 										
