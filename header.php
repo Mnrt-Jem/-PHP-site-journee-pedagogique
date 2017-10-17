@@ -25,59 +25,65 @@
 
   <body>
     <!-- Page Header -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-9" style="height: 100px;">
-        <br>
-          <h1>Créer, Partager, Construire Ensemble !</h1>
-        </div>
-        <div class="col-lg-3" style="text-align: right; height: 100px;">
-        <br>
-          <a href="www.youtube.com" id="fonts_dmonfion"><i class="fa fa-play fa-2x" aria-hidden="true" ></i></a>
-          <a href="www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-          <a href="contact.php"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid" style="background-color: #19253D; padding-bottom: 20px;">
-      <div class="row">
-    	<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" style="width: 100%;" >
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <img class="d-block img-fluid" src="img/sv_slide3.png" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/sv_slide2.png" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/sv_slide1.png" alt="Third slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="index.php"><h3>Accueil</h3></a>
-        </div>
-        <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="programme.php"><h3>Programme</h3></a>
-        </div>
-        <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="live.php"><h3>Live</h3></a>
-        </div>
-        <div class="col-lg-3" id="header_menu"> 
-        <a class="" href="temoignages.php"><h3>Témoignages</h3></a>
+    <header>
+      <div class="container-fluid">
+        <div class="row" id="header-menu-title">
+          <div class="col-lg-9" style="height: 100px;">
+          <br>
+            <h1>Créer, Partager, Construire Ensemble !</h1>
+          </div>
+          <div class="col-lg-3" id="logo-menu-title">
+          <br>
+            <a href="www.youtube.com" id="fonts_dmonfion"><i class="fa fa-play fa-2x" aria-hidden="true" ></i></a>
+            <a href="www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <a href="contact.php"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="container-fluid" style="background-color: white; padding-bottom: 20px;">
+        <div class="row">
+      	 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" style="width: 100%;" >
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block img-fluid" src="img/Accueil_header/Abbaye-St-Vincent_batiment-conventuel.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="img/Accueil_header/Abbaye-St-Vincent_Cloitre.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="img/Accueil_header/Abbaye-St-Vincent_jardin-du-Cloitre.jpg" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="menu_header">
+        <div class="row">
+          <div class="col-lg-3" id="header_menu_accueil"> 
+            <a class="" href="index.php"><h3>Accueil</h3></a>
+          </div>
+          <div class="col-lg-3" id="header_menu_programme"> 
+            <a class="" href="programme.php"><h3>Programme</h3></a>
+          </div>
+          <div class="col-lg-3" id="header_menu_live"> 
+            <a class="" href="live.php"><h3>Live</h3></a>
+          </div>
+          <div class="col-lg-3" id="header_menu_temoignages"> 
+            <a class="" href="temoignages.php"><h3>Témoignages</h3></a>
+          </div>            
+        </div>
+      </div>
+    </header>
