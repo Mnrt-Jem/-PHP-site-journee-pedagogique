@@ -20,11 +20,11 @@
  	text-decoration:underline
  }
 
- h1,h2,h3,h4,h5,h6
+ /*h1,h2,h3,h4,h5,h6
  {
  	font-weight:800;
  	font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
- }
+ }*/
 
  a
  {
@@ -317,15 +317,40 @@ header.masthead .post-heading .meta a
 	}
 }
 
-#header_menu
+#header_menu_programme h3
 {
 	text-align: center;
 	padding-top: 15px;
+	color: white;
+}
+#header_menu_accueil h3
+{
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+}
+#header_menu_live h3
+{
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+}
+#header_menu_temoignages h3
+{
+	text-align: center;
+	padding-top: 15px;
+	color: white;
 }
 
-#header_menu>a:hover,a:focus
+#header_menu h3>a:hover,a:focus
 {
 	color: #ffffff;
+	opacity: 0.1;
+}
+
+#menu_header
+{
+	background-color: rgba(30, 45, 76, 1);;
 }
 
 .post-preview>a
@@ -466,6 +491,11 @@ footer .copyright
 	text-align:center
 }
 
+footer img
+{
+	margin-left: -115px;
+}
+
 .btn
 {
 	font-size:14px;
@@ -541,3 +571,28 @@ fieldset[disabled] .btn-primary:hover
 	border:1px solid #19253D;
 	background-color:#19253D
 }
+
+#carouselExampleIndicators img
+{
+	margin-left: 20px;
+	width: 1480px;
+	height: 420px;
+}
+
+#header-menu-title
+{
+	margin-left: 275px;
+}
+
+#logo-menu-title
+{
+	text-align: right;
+	height: 100px;
+	margin-left: -155px;
+}
+
+h1, h2, h3, h4, h5
+{
+	color: #1E2D4C;
+}
+
