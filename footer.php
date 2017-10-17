@@ -7,7 +7,7 @@
               <li class="list-inline-item">
                 
                   <span class="fa-stack fa-lg">
-                    <img src="img/logo.png">
+                    <img src="img/Accueil_footer/logo_0.jpg">
                   </span>
                   <br>
                   <p>Lycée Saint-Vincent SUAVITER & FORTITER</p>
