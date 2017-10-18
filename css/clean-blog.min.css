@@ -579,16 +579,12 @@ fieldset[disabled] .btn-primary:hover
 	height: 420px;
 }
 
-#header-menu-title
-{
-	margin-left: 275px;
-}
+
 
 #logo-menu-title
 {
 	text-align: right;
 	height: 100px;
-	margin-left: -155px;
 }
 
 h1, h2, h3, h4, h5
