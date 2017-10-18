@@ -26,7 +26,7 @@
   <body>
     <!-- Page Header -->
     <header>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row" id="header-menu-title">
           <div class="col-lg-9" style="height: 100px;">
           <br>
@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid" style="background-color: white; padding-bottom: 20px;">
+      <div class="container" style="background-color: white; padding-bottom: 20px;">
         <div class="row">
       	 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" style="width: 100%;" >
               <ol class="carousel-indicators">
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid" id="menu_header">
+      <div class="container" id="menu_header">
         <div class="row">
           <div class="col-lg-3" id="header_menu_accueil"> 
             <a class="" href="index.php"><h3>Accueil</h3></a>
