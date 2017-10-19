@@ -81,7 +81,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="login.php" role="form" class="form-vertical col-md-9 col-sm-8 col-xs-8" method="POST">
 								<fieldset>
-									<legend style="width: 500px;"><span style="color: #6DA542;"><em>journée pedagogique - Connexion Administrateur</em></span><a href="../index.php" class="btn" ><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend style="width: 500px;"><span style="color: #6DA542;"><em>Site pédagogique -	 Connexion Administrateur</em></span><a href="../index.php" class="btn" style="margin-left: 8px;"> Retour</a></legend>
 									<div class="form-group">
 										<label for="identifiant">Identifiant :</label>	
 										<input class="form-nom" type="text" id="login"  placeholder="nom d'utilisateur" style="margin-left: 20px;" name="login" required="">
@@ -107,6 +107,10 @@
 						<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
 							<br />
 							<br />
+							<ul>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
+								</ul>
 						</div>			
 					</div>					
 				</div>

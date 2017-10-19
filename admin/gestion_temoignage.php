@@ -52,7 +52,7 @@
 				<div class="red-bar">
 					<div class="administration-trombi">
 						<div class="row">
-							<h1><strong>Administration page Témoignages</strong><a href="index.php" class="btn" style="margin-left: 65px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></h1>
+							<h1><strong>Administration page Témoignages</strong><a href="index.php" class="btn" style="margin-left: 65px;"> Retour</a></h1>
 			                <table class="table table-striped table-bordered table-hover">
 			                  <thead>
 			                    <tr>
@@ -96,6 +96,10 @@
 							<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
 								<br />
 								<br />
+								<ul>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
+								</ul>
 							</div>			
 						</div>					
 					</div>

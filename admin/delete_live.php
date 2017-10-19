@@ -100,8 +100,8 @@
 								<br />
 								<br />
 								<ul>
-									<li class="end">EGETRA SA &copy;2009 - Tous droits réservés</li> 
-									<li class="sign">Powered by Debian GNU / Linux<a href="http://wiki.resgestrans.int"><img src="../images/tuxlogo.png" style="vertical-align:middle" alt="Debian" /></a> - Apache<img src="../images/apachelogo.png" style="vertical-align:middle" alt="LE serveur Web !" /></a> - Designed By Seb2A</li>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
 								</ul>
 							</div>			
 						</div>					

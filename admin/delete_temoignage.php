@@ -129,7 +129,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="<?php echo 'delete_temoignage.php?id=' .$id; ?>" role="form" class="form-vertcial col-md-8 col-sm-7 col-xs-7" method="post" enctype="multipart/form-data">
 								<fieldset>
-									<legend style="width: 468px;"><span style="color: #6DA542;"><em>Administration - Modifier la photo numéro <?php echo $id_temoignage; ?> </em></span><a href="gestion_temoignage.php" class="btn""><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend style="width: 468px;"><span style="color: #6DA542;"><em>Modifier la photo numéro <?php echo $id_temoignage; ?> </em></span><a href="gestion_temoignage.php" class="btn" style="margin-left: 144px;"> Retour</a></legend>
 									<div class="form-group" for="photo">
 										<label for="img_temoignage" id="photo">Sélectionner une nouvelle image (max. 1 Mo):</label>
 										<p><?php echo $image;?></p>
@@ -154,6 +154,10 @@
 							<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
 								<br />
 								<br />
+								<ul>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
+								</ul>
 							</div>			
 						</div>					
 					</div>

@@ -82,7 +82,7 @@
 				                    <p class="alert alert-warning" style="width:380px">Êtes-vous sur de vouloir supprimer l'utilisateur ?</p>
 				                    <div class="form-actions" style="margin-left: 140px">
 				                      <button type="submit" class="btn btn-warning">Oui</button>
-				                      <a class="btn btn-default" href="index.php">Non</a>			                      
+				                      <a class="btn btn-default" href="gestion_utilisateur.php">Non</a>			                      
 			                    	</div>		                    			                    
 			                	</form>
 			                </div>								
@@ -100,8 +100,8 @@
 								<br />
 								<br />
 								<ul>
-									<li class="end">EGETRA SA &copy;2009 - Tous droits réservés</li> 
-									<li class="sign">Powered by Debian GNU / Linux<a href="http://wiki.resgestrans.int"><img src="../images/tuxlogo.png" style="vertical-align:middle" alt="Debian" /></a> - Apache<img src="../images/apachelogo.png" style="vertical-align:middle" alt="LE serveur Web !" /></a> - Designed By Seb2A</li>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
 								</ul>
 							</div>			
 						</div>					

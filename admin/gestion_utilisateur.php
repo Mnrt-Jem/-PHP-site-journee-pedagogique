@@ -93,7 +93,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="gestion_utilisateur.php" role="form" class="form-vertcial col-md-9" method="post" enctype="multipart/form-data">
 								<fieldset>
-									<legend><span style="color: #6DA542;"> <em>Utilisateur - Administration</em></span><a href="index.php" class="btn" style="margin-left: 40px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend><span style="color: #6DA542;"> <em>Utilisateur - Administration</em></span><a href="index.php" class="btn" style="margin-left: 110px;">Retour</a></legend>
 									<div class="form-group" for="photo">
 									<br>
 									<div class="form-group" for="nom">
@@ -111,6 +111,7 @@
 										</select>
 										<span class="help-inline" style="color: red"><?php echo $agenceError;?></span>
 									</div>
+									<br>
 									<button type="submit" class="btn" style="margin-left: 65px;" name="validation">Ajouter l'utilisateur</button>
 								</fieldset>
 							</form>						
@@ -136,12 +137,14 @@
 											echo '<td>'. $user['mdp_log'] . '</td>';
 											echo '<td width=300>';
 				                            echo ' ';
-				                            echo '<a class="btn " href="delete_utilisateur.php?id='.$user['id_log'].'"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>';
+				                            echo '<a class="btn " href="delete_utilisateur.php?id='.$user['id_log'].'"> Supprimer</a>';
 				                            echo '</td>';
 				                            echo '</tr>';
 			                        }
 			                        
 			                      ?>
+			                  </tbody>
+			              </table>
 						</div>
 					</div>				
 				</div>
@@ -153,6 +156,12 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-3 col-xs-3"></div>
 							<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
+								<br />
+								<br />
+								<ul>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
+								</ul>
 							</div>			
 						</div>					
 					</div>

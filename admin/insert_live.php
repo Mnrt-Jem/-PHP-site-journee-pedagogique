@@ -80,7 +80,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form action="insert_live.php" role="form" class="form-vertcial col-md-9 col-sm-9 col-xs-9" method="post">
 								<fieldset>
-									<legend><span style="color: #6DA542; font-style: normal;"><em>Administration - Ajout d'une vidéo</em></span><a href="gestion_live.php" class="btn" style="margin-left: 15px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend><span style="color: #6DA542; font-style: normal;"><em>Administration - Ajout d'une vidéo</em></span><a href="gestion_live.php" class="btn" style="margin-left: 43px;"> Retour</a></legend>
 									<div class="form-group" for="nom">
 										<label id="nom">Lien de la vidéo :</label>	
 										<input class="form-nom" type="text" name="lien_yt" placeholder="lien de la vidéo" style="margin-left: 67px;" required="">
@@ -109,8 +109,8 @@
 								<br />
 								<br />
 								<ul>
-									<li class="end">EGETRA SA &copy;2009 - Tous droits réservés</li> 
-									<li class="sign">Powered by Debian GNU / Linux<a href="http://wiki.resgestrans.int"><img src="../images/tuxlogo.png" style="vertical-align:middle" alt="Debian" /></a> - Apache<img src="../images/apachelogo.png" style="vertical-align:middle" alt="LE serveur Web !" /></a> - Designed By Seb2A</li>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
 								</ul>
 							</div>			
 						</div>					

@@ -79,7 +79,7 @@
 							<div class="col-md-3 col-sm-2 col-xs-2"></div>
 							<form role="form" class="form-vertcial col-md-9 col-sm-8 col-xs-8" method="post" action="admin/index.php">
 								<fieldset>
-									<legend><span style="color: #6DA542;"> <em>Administration site pédagogique</em></span><a href="../index.php" class="btn" style="margin-left: 80px;"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a></legend>
+									<legend><span style="color: #6DA542;"> <em>Administration site pédagogique</em></span><a href="../index.php" class="btn" style="margin-left: 56px;"><span ></span> Retour</a></legend>
 								</fieldset>
 							</form>
 						</div>
@@ -92,10 +92,12 @@
 				<div class="row">
 					<div class="administration-trombi">
 						<div class="row">
-						<a href="gestion_utilisateur.php" class="btn" style="margin-left: 25px;"><span class="glyphicon glyphicon-plus"></span> Administration utilisateur</a>
-						<a href="gestion_live.php" class="btn" style="margin-left: 25px;">Administration Live</a>
-						<a href="gestion_temoignage.php" class="btn" style="margin-left: 25px;"><span class="glyphicon glyphicon-arrow-left"></span> Administration Témoignages</a></h1>
-					</div>					
+						<a href="gestion_utilisateur.php" class="btn" style="margin-left: 140px; margin-right: 80px;"><button class="btn btn-default">Administration Utilisateur</button></a>
+						<a href="gestion_live.php" class="btn" style="margin-left: 25px; margin-right: 80px;"><button class="btn btn-default">Administration Live</button></a>
+						<a href="gestion_temoignage.php" class="btn" style="margin-left: 25px;"><button class="btn btn-default">Administration Témoignages</button></a></h1>
+					</div>	
+					<br>
+					<br>				
 				</div>
 			</div>			
 		</section>
@@ -107,6 +109,10 @@
 							<div class="footer-trombi col-md-7 col-sm-7 col-xs-7">
 								<br />
 								<br />
+								<ul>
+									<li class="end">Lycée Saint-Vincent &copy;2017 - Tous droits réservés</li> 
+									<li class="sign">Administration site pédagogique</li>
+								</ul>
 							</div>			
 						</div>					
 					</div>
